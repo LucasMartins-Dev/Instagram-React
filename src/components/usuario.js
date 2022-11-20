@@ -4,22 +4,20 @@ export default function Usuario() {
     const[nameusu, setnameusu] = React.useState("Catana")
     const[foto,setfoto]=React.useState("assets/catanacomics 1.svg")
     function Trocarfoto(){
-       let aux = prompt("Coloque a Url da sua Foto");
+       const aux = prompt("Coloque a Url da sua Foto");
        if (aux === ""){
         setfoto(foto);
        }else{
         setfoto(aux);
-       }
-        
+       }  
     }
     function Trocarnome(){
-        let aux = prompt("Escreva seu Nome");
+        const aux = prompt("Escreva seu Nome");
         if (aux === ""){
             setnameusu(nameusu);
         }else{
             setnameusu(aux);
-        }
-       
+        }   
     }
 
     return (
