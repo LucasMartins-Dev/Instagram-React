@@ -11,21 +11,21 @@ export default function Post (props){
 }
 
   let [numlikes, setnumLikes] = React.useState(props.likenum)
-  const [like, setlike] = React.useState(<ion-icon name="heart-outline" onClick={inserirCurtida}></ion-icon>)
+  const [like, setlike] = React.useState(<ion-icon data-test="like-post" name="heart-outline" onClick={inserirCurtida}></ion-icon>)
   function inserirCurtida(){
       
-      setlike(<ion-icon color="danger"  name="heart" onClick={tirarCurtida}></ion-icon>)
+      setlike(<ion-icon data-test="like-post"color="danger"  name="heart" onClick={tirarCurtida}></ion-icon>)
       setnumLikes(numlikes+1);
 }
   function tirarCurtida(){
-      setlike(<ion-icon name="heart-outline" onClick={inserirCurtida}></ion-icon>)
+      setlike(<ion-icon data-test="like-post"name="heart-outline" onClick={inserirCurtida}></ion-icon>)
       setnumLikes(numlikes);
   }
 
  
     return(
       
-        <div className="post-01">
+        <div data-test="post" className="post-01">
           <div className="post-inicio">
             <div className="post-titulo">
               <img alt= "imagem" src={props.icon} />
@@ -37,7 +37,7 @@ export default function Post (props){
          
         </div>
          <div className="post-foto">
-              <img onClick={inserirCurtida} alt= "imagem" src={props.image}/>
+              <img data-test="post-image" onClick={inserirCurtida} alt= "imagem" src={props.image}/>
           </div>
           <div>
               <div className="post-fim">
@@ -48,13 +48,13 @@ export default function Post (props){
                     
                   </div>
                   <div>
-                  <ion-icon  className="pontos2" name={saved} onClick={Save}></ion-icon>
+                  <ion-icon data-test="save-post" className="pontos2" name={saved} onClick={Save}></ion-icon>
                   </div>
                   
               </div>
               <div className="post-ultimo">
                   <img alt= "imagem" src="assets/respondeai 1.svg" />
-                  <p>Curtido por <b>respondeai</b> e <b>outras {numlikes} pessoas</b></p>
+                  <p data-test="likes-number">Curtido por <b>respondeai</b> e <b>outras {numlikes} pessoas</b></p>
                 </div>
           </div>
           <div>
