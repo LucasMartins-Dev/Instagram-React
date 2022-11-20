@@ -35,7 +35,6 @@ export default function Post (props){
             <div>
               <img alt= "imagem" className="pontos" src="assets/ellipsis-horizontal-outline.svg"/>
             </div>
-         
         </div>
          <div className="post-foto">
               <img data-test="post-image" onClick={inserirCurtida} alt= "imagem" src={props.image}/>
@@ -46,12 +45,10 @@ export default function Post (props){
                     {like}
                     <img alt= "imagem" src="assets/chatbubble-outline.svg" />
                     <img alt= "imagem" src="assets/paper-plane-outline.svg" />
-                    
                   </div>
                   <div>
                   {saved}
                   </div>
-                  
               </div>
               <div className="post-ultimo">
                   <img alt= "imagem" src="assets/respondeai 1.svg" />
@@ -59,8 +56,7 @@ export default function Post (props){
                 </div>
           </div>
           <div>
-
           </div>
         </div>
-    )
+    );
 }

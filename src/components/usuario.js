@@ -1,15 +1,15 @@
 import React from 'react'
 
 export default function Usuario() {
-    const[nameusu, setnameusu] = React.useState("Catana")
-    const[foto,setfoto]=React.useState("assets/catanacomics 1.svg")
+    const[nameusu, setnameusu] = React.useState("Catana");
+    const[foto,setfoto]=React.useState("assets/catanacomics 1.svg");
     function Trocarfoto(){
        const aux = prompt("Coloque a Url da sua Foto");
        if (aux === ""){
         setfoto(foto);
        }else{
         setfoto(aux);
-       }  
+       }
     }
     function Trocarnome(){
         const aux = prompt("Escreva seu Nome");
@@ -17,7 +17,7 @@ export default function Usuario() {
             setnameusu(nameusu);
         }else{
             setnameusu(aux);
-        }   
+        } 
     }
 
     return (
@@ -29,8 +29,7 @@ export default function Usuario() {
             <h2 data-test="name">{nameusu}</h2>
             <ion-icon data-test="edit-name" onClick={Trocarnome} name="pencil-outline"></ion-icon>
             </div>
-            
           </div>
-        </div> 
-    )
+        </div>
+    );
 }
