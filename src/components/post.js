@@ -4,13 +4,13 @@ import React from 'react'
 
 
 export default function Post (props){
-  const [saved, setSave] = React.useState(<ion-icon data-test="save-post" className="pontos2" name="bookmark-outline" onClick={Save}></ion-icon>)
+  const [saved, setSave] = React.useState(<ion-icon data-test="save-post" className="pontos2" name="bookmark-outline" onClick={Save}></ion-icon>);
     function Save(){
         
-        setSave(<ion-icon data-test="save-post" className="pontos2" name="bookmark" onClick={Notsave}></ion-icon>)
+        setSave(<ion-icon data-test="save-post" className="pontos2" name="bookmark" onClick={Notsave}></ion-icon>);
 }
   function Notsave(){
-    setSave(<ion-icon data-test="save-post" className="pontos2" name="bookmark-outline" onClick={Save}></ion-icon>)
+    setSave(<ion-icon data-test="save-post" className="pontos2" name="bookmark-outline" onClick={Save}></ion-icon>);
   }
 
   let [numlikes, setnumLikes] = React.useState(props.likenum)

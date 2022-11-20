@@ -316,9 +316,7 @@ body {
     }
   }
   @media (max-width: 613px) {
-    .menu1 {
-      display: none;
-    }
+
     .menu-01 :nth-child(2) {
       display: none;
     }
@@ -377,9 +375,6 @@ body {
     .conteudo {
       padding-top: 51px;
     }
-    .posts {
-      padding-top: 1px;
-    }
     .post-01 {
       width: 100%;
     }
@@ -389,10 +384,8 @@ body {
     .post-03 {
       width: 100%;
     }
-    .post-foto img {
-      width: 100%;
-    }
     .posts {
+      padding-top: 1px;
       width: 100%;
     }
     .esquerda {
