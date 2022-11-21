@@ -11,16 +11,18 @@ export default function Post (props){
   function Notsave(){
     setSave(<ion-icon data-test="save-post" className="pontos2" name="bookmark-outline" onClick={Save}></ion-icon>);
   }
-
+  const [imagecurtida,setimagecurtida]= React.useState(<img data-test="post-image" onClick={inserirCurtida} alt= "imagem" src={props.image}/>)
   const [numlikes, setnumLikes] = React.useState(props.likenum);
   const [like, setlike] = React.useState(<ion-icon data-test="like-post" name="heart-outline" onClick={inserirCurtida}></ion-icon>);
   function inserirCurtida(){  
       setlike(<ion-icon data-test="like-post"color="danger"  name="heart" onClick={tirarCurtida}></ion-icon>);
       setnumLikes(numlikes+1);
+      setimagecurtida(<img data-test="post-image" alt= "imagem" src={props.image}/>)
 }
   function tirarCurtida(){
       setlike(<ion-icon data-test="like-post"name="heart-outline" onClick={inserirCurtida}></ion-icon>);
       setnumLikes(numlikes);
+      setimagecurtida(<img data-test="post-image" onClick={inserirCurtida} alt= "imagem" src={props.image}/>)
   }
 
  
@@ -37,7 +39,7 @@ export default function Post (props){
             </div>
         </div>
          <div className="post-foto">
-              <img data-test="post-image" onClick={inserirCurtida} alt= "imagem" src={props.image}/>
+              {imagecurtida}
           </div>
           <div>
               <div className="post-fim">
