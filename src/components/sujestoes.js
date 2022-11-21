@@ -1,52 +1,29 @@
 
 
 export default function Sujestoes() {
+  const sujestoes = [
+    {name:"bad.vibes.memes",image:"assets/badvibesmemes 1.svg", status:"Segue você"},
+    {name:"chibirdart",image:"assets/chibirdart 1.svg", status:"Segue você"},
+    {name:"razoesparaacreditar",image:"assets/razoesparaacreditar 1.svg", status:"Novo no Instagram"},
+    {name:"adorable_animals",image:"assets/adorableanimals 1.svg", status:"Segue você"},
+    {name:"smallcutecats",image:"assets/smallcutecats 1.svg", status:"Segue você"}
+  ]
     return (
         <div>
         <div className="sb-02 espaçamento">
           <h2>Sugestões para você</h2>
           <p>Ver tudo</p>
         </div>
+        {sujestoes.map((s)=>
         <div className="sb-03">
-          <img alt="imagem" src="assets/badvibesmemes 1.svg" />
+          <img alt="imagem" src={s.image} />
           <div>
-            <p>bad.vibes.memes</p>
-            <h2>Segue você</h2>
+            <p>{s.name}</p>
+            <h2>{s.status}</h2>
           </div>
           <div><h3>Seguir</h3></div>
         </div>
-        <div className="sb-03">
-          <img alt="imagem" src="assets/chibirdart 1.svg" />
-          <div>
-            <p>chibirdart</p>
-            <h2>Segue você</h2>
-          </div>
-          <div><h3>Seguir</h3></div>
-        </div>
-        <div className="sb-03">
-          <img alt="imagem" src="assets/razoesparaacreditar 1.svg" />
-          <div>
-            <p>razoesparaacreditar</p>
-            <h2>Novo no Instagram</h2>
-          </div>
-          <div><h3>Seguir</h3></div>
-        </div>
-        <div className="sb-03">
-          <img alt="imagem" src="assets/adorableanimals 1.svg" />
-          <div>
-            <p>adorable_animals</p>
-            <h2>Segue você</h2>
-          </div>
-          <div><h3>Seguir</h3></div>
-        </div>
-        <div className="sb-03">
-          <img alt="imagem" src="assets/smallcutecats 1.svg" />
-          <div>
-            <p>smallcutecats</p>
-            <h2>Segue você</h2>
-          </div>
-          <div><h3>Seguir</h3></div>
-        </div>
+         )}
         </div>
     )
 }
